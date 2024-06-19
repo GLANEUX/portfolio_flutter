@@ -35,16 +35,18 @@ class _DeviceScreenState extends State<DeviceScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: _currentScreen != 0 ? AppBar(
-        title: Text(_screenLabels[_currentScreen]),
-        actions: _links,
-      ) : null,
+      appBar: _currentScreen != 0
+          ? AppBar(
+              title: Text(_screenLabels[_currentScreen]),
+              actions: _links,
+            )
+          : null,
       body: _screenList[_currentScreen],
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Colors.amber,
+        backgroundColor: const Color.fromARGB(255, 233, 206, 206),
         type: BottomNavigationBarType.fixed,
-        selectedItemColor: Colors.red,
-        unselectedItemColor: Colors.black,
+        selectedItemColor: const Color.fromARGB(255, 27, 11, 247),
+        unselectedItemColor: const Color.fromARGB(255, 128, 167, 241),
         iconSize: 35,
         currentIndex: _currentScreen,
         onTap: _onTabTapped,
@@ -61,29 +63,31 @@ class _DeviceScreenState extends State<DeviceScreen> {
 
   List<Widget> get _links {
     return [
-      _iconButton('https://linkedin.com/in/GLANEUX', 'assets/img/linkedin.png'),
-      _iconButton('https://github.com/GLANEUX/', 'assets/img/github.png'),
+      IconButton(
+        onPressed: () async {
+          await _launchURL('https://linkedin.com/in/GLANEUX');
+        },
+        icon: Image.asset('assets/img/linkedin.png', height: 25),
+      ),
+      IconButton(
+        onPressed: () async {
+          await _launchURL('https://github.com/GLANEUX/');
+        },
+        icon: Image.asset('assets/img/github.png', height: 25),
+      ),
     ];
-  }
-
-  IconButton _iconButton(String url, String img) {
-    final Uri _url = Uri.parse(url);
-
-    return IconButton(
-      onPressed: () async {
-        if (await canLaunchUrl(_url)) {
-          await launchUrl(_url);
-        } else {
-          throw 'Impossible de lancer $url';
-        }
-      },
-      icon: Image.asset(img, height: 25),
-    );
   }
 
   void _onTabTapped(int index) {
     setState(() {
       _currentScreen = index;
     });
+  }
+
+  Future<void> _launchURL(String urlString) async {
+    final Uri url = Uri.parse(urlString);
+    if (!await launchUrl(url)) {
+      throw Exception('Could not launch $urlString');
+    }
   }
 }
