@@ -10,25 +10,57 @@ class InfosScreen extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          Text('Séjour à l\'étranger', style: Theme.of(context).textTheme.headline6),
+          Text('Blog Posts', style: Theme.of(context).textTheme.titleLarge),
           const SizedBox(height: 10),
-          Image.asset('assets/img/linkedin.png'),
-          const SizedBox(height: 10),
-          Text(
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore nihil odio iste nisi harum excepturi eaque, id dignissimos inventore quod.',
-            style: Theme.of(context).textTheme.bodyText1,
-          ),
+          blogPost(
+            context,
+            'assets/img/free-nature-images.jpg',
+           'Les merveilles de la nature',
+            'Découvrez les secrets cachés des plus beaux paysages naturels et comment ils influencent notre bien-être.',
+         ),
           const SizedBox(height: 20),
-          Text('Sports pratiqués', style: Theme.of(context).textTheme.headline6),
-          const SizedBox(height: 10),
-          Image.asset('assets/img/linkedin.png'),
-          const SizedBox(height: 10),
-          Text(
-            'Repellat accusamus consequuntur tempore cum, totam obcaecati repudiandae eius saepe fuga id quam facere a at!',
-            style: Theme.of(context).textTheme.bodyText1,
-          ),
+          blogPost(
+            context,
+            'assets/img/tech.jpg',
+            'Innovation technologique en 2024',
+            'Un aperçu des avancées technologiques les plus prometteuses de cette année et de leur impact sur notre quotidien.',
+           ),
         ],
       ),
+    );
+  }
+
+  Widget blogPost(BuildContext context, String imagePath, String title, String excerpt) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: <Widget>[
+        Stack(
+          alignment: Alignment.bottomCenter,
+          children: <Widget>[
+            Image.asset(imagePath),
+            Container(
+              width: double.infinity,
+              color: Colors.white.withOpacity(0.7),
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                title,
+                style: const TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black,
+                ),
+                textAlign: TextAlign.center,
+              ),
+            ),
+          ],
+        ),
+        const SizedBox(height: 10),
+        Text(
+          excerpt,
+          style: Theme.of(context).textTheme.bodyLarge,
+        ),
+        const Divider(),
+      ],
     );
   }
 }

@@ -66,8 +66,29 @@ flutter:
   assets:
     - assets/img/github.png
     - assets/img/linkedin.png
-    - assets/img/LOGO_MDS.jpg
+    - assets/img/mds.jpg
     - assets/img/user.png
+    - assets/img/ceppia.jpg
+    - assets/img/chezerwan.png
+    - assets/img/epdm.png
+    - assets/img/quaestyo.jpg
+    - assets/img/lpmiaw.jpg
+    - assets/img/lyce.jpg
+    - assets/img/iut.jpg
+    - assets/img/Mysql.png
+    - assets/img/MongoDB.jpg
+    - assets/img/ReactJS.png
+    - assets/img/VueJS.png
+    - assets/img/CSS.png
+    - assets/img/HTML.png
+    - assets/img/SASS.png
+    - assets/img/Javascript.png
+    - assets/img/PHP.png
+    - assets/img/Wordpress.png
+    - assets/img/Flutter.png
+    - assets/img/ReactNative.png
+    - assets/img/free-nature-images.jpg
+    - assets/img/tech.jpg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 

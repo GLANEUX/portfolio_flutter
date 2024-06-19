@@ -10,11 +10,10 @@ class FormationScreen extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          formationItem('assets/img/LOGO_MDS.jpg', 'My Digital School', 'Bachelor 3 - Conception objet, UML'),
-          formationItem('assets/img/linkedin.png', 'École Supérieure du Digital', 'Bachelor 1 & 2 - Développement Web'),
-          formationItem('assets/img/linkedin.png', 'Sup de Web', 'Master 1 & 2 - Flutter'),
-          formationItem('assets/img/linkedin.png', 'Digital Campus Paris', 'FC - Data Management'),
-          formationItem('assets/img/linkedin.png', 'Udemy', 'SQL / MySQL en profondeur'),
+          formationItem('assets/img/mds.jpg', 'My Digital School', 'Bachelor 3 développeur web '),
+          formationItem('assets/img/lpmiaw.jpg', 'Université Paris-Saclay', 'LP MIAW DAWI'),
+          formationItem('assets/img/iut.jpg', 'IUT d\'Aix-Marseille', 'DUT MMI'),
+          formationItem('assets/img/lyce.jpg', 'Lycée Hôtellier de Guyancourt', 'BAC STHR'),
         ],
       ),
     );

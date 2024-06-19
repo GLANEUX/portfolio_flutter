@@ -7,9 +7,10 @@ import 'competence.dart';
 import 'infos.dart';
 
 class DeviceScreen extends StatefulWidget {
-  const DeviceScreen({Key? key}) : super(key: key);
+  const DeviceScreen({super.key});
 
   @override
+  // ignore: library_private_types_in_public_api
   _DeviceScreenState createState() => _DeviceScreenState();
 }
 

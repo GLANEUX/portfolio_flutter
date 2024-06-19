@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         fontFamily: 'Rubik',
         primarySwatch: Colors.green,
-        scaffoldBackgroundColor: Color.fromARGB(255, 246, 252, 255),
+        scaffoldBackgroundColor: const Color.fromARGB(255, 246, 252, 255),
         brightness: Brightness.light,
         
       ),
