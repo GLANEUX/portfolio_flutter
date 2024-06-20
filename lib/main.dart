@@ -13,8 +13,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false, 
       theme: ThemeData(
         fontFamily: 'Rubik',
-        primarySwatch: Colors.green,
-        scaffoldBackgroundColor: const Color.fromARGB(255, 246, 252, 255),
+        primarySwatch: Colors.lightBlue,
+        scaffoldBackgroundColor: const Color.fromARGB(255, 255, 255, 255),
         brightness: Brightness.light,
         
       ),

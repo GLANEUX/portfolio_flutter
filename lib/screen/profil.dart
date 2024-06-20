@@ -11,7 +11,7 @@ class ProfilScreen extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
           Container(
-            color: const Color.fromARGB(255, 195, 235, 196),
+            color: Color.fromARGB(255, 103, 196, 215),
             padding: const EdgeInsets.all(20),
             child: Column(
               children: [

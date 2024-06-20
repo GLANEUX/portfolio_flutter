@@ -38,16 +38,17 @@ class _DeviceScreenState extends State<DeviceScreen> {
     return Scaffold(
       appBar: _currentScreen != 0
           ? AppBar(
+            backgroundColor: const Color.fromARGB(129, 103, 196, 215),
               title: Text(_screenLabels[_currentScreen]),
               actions: _links,
             )
           : null,
       body: _screenList[_currentScreen],
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: const Color.fromARGB(255, 233, 206, 206),
+        backgroundColor: const Color.fromARGB(255, 16, 31, 34),
         type: BottomNavigationBarType.fixed,
-        selectedItemColor: const Color.fromARGB(255, 27, 11, 247),
-        unselectedItemColor: const Color.fromARGB(255, 128, 167, 241),
+        selectedItemColor: const Color.fromARGB(255, 103, 196, 215),
+        unselectedItemColor: const Color.fromARGB(129, 103, 196, 215),
         iconSize: 35,
         currentIndex: _currentScreen,
         onTap: _onTabTapped,

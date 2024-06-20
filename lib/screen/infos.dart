@@ -10,7 +10,6 @@ class InfosScreen extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          Text('Blog Posts', style: Theme.of(context).textTheme.titleLarge),
           const SizedBox(height: 10),
           blogPost(
             context,
@@ -19,6 +18,20 @@ class InfosScreen extends StatelessWidget {
             'Découvrez les secrets cachés des plus beaux paysages naturels et comment ils influencent notre bien-être.',
          ),
           const SizedBox(height: 20),
+          blogPost(
+            context,
+            'assets/img/tech.jpg',
+            'Innovation technologique en 2024',
+            'Un aperçu des avancées technologiques les plus prometteuses de cette année et de leur impact sur notre quotidien.',
+           ),
+            const SizedBox(height: 10),
+          blogPost(
+            context,
+            'assets/img/free-nature-images.jpg',
+           'Les merveilles de la nature',
+            'Découvrez les secrets cachés des plus beaux paysages naturels et comment ils influencent notre bien-être.',
+         ),
+          const SizedBox(height: 10),
           blogPost(
             context,
             'assets/img/tech.jpg',
